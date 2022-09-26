@@ -10,6 +10,30 @@
 
 <body>
 
+  <script>
+    /* function outer() {
+      const outerVar = 'Hey I am the outer Var!';
+      function inner() {
+        const innerVar = 'Hey I am the inner Var!';
+        console.log(innerVar);
+        console.log(outerVar);
+      }
+      return inner;
+    }
+
+    const innerFn = outer(); */
+
+    function createGame(gameName) {
+      let score = 0;
+      return function win() {
+        score++;
+        return `Your name is ${gameName} and your score is ${score}`;
+      };
+    }
+
+    const hockeyGame = createGame('Hockey');
+    const soccerGame = createGame('Soccer');
+  </script>
 </body>
 
 </html>

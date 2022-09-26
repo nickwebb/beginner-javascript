@@ -9,17 +9,39 @@
 </head>
 
 <body>
+  <img class="nice cool" src="https://picsum.photos/200">
   <div class="items">
-    <p>Hi I'm a item</p>
-    <div>
-      <h2>Sub Div</h2>
-      <p>Hi I'm a item</p>
+    <div class="item">
+      <img data-name="nick" data-last='webb' class="custom" src="https://picsum.photos/200">
 
+      <p>Hi I'm a item</p>
     </div>
+    <div class="item">
+      <h2>Sub Div div div</h2>
+      <p>Hi I'm a item</p>
+      <p class='pizza'>This is how many pizzas I ate 🍕</p>
+    </div class="item">
     <img src="https://source.unsplash.com/random/300x300" />
     <p>Hi I'm a item</p>
     <p>Hi I'm a item</p>
   </div>
+  <style>
+    h2 span {
+      display: none;
+    }
+
+    img {
+      transition: all 0.2s;
+    }
+
+    .round {
+      border-radius: 50%;
+      transform: rotate(1turn) scale(1);
+      box-shadow: 0 0 10px #000;
+    }
+  </style>
+
+  <script src="./creating-with-strings.js"></script>
 </body>
 
 </html>
