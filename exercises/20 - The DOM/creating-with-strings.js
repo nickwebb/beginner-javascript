@@ -1,11 +1,18 @@
-console.log('it works!');
-
 const item = document.querySelector('.item');
 
-item.innerHTML = `
+const width = 500;
+const src = `https://picsum.photos/${width}`;
+const desc = `Cute Pup`;
 
-    <h1>Hey How are you?</h1>
-
-
+const myHTML = `
+    <div class="wrapper">
+        <h2>Cute ${desc}</h2>
+        <img src="${src}" alt="${desc}" />
+    </div>
     `;
-console.log(item.innerHTML);
+
+const myFragment = document.createRange().createContextualFragment(myHTML);
+
+console.log(myFragment);
+
+document.body.appendChild(myHTML);
