@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Intervals and Timers</title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Intervals and Timers</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
+  <body>
+    <script>
+      function buzzer() {
+        console.log('ENGGGGG');
+      }
+      console.log('starting...');
+      setTimeout(buzzer, 2000);
+      console.log('Finished!');
+      setInterval(buzzer, 100);
 
-<body>
+      function destroy() {
+        document.body.innerHTML = `<p>DESTROYED</p>`;
+      }
 
-</body>
+      const bombTimer = setTimeout(destroy, 2000);
 
+      window.addEventListener('click', () => {
+        console.log('You clicked! You saved the world!');
+        clearTimeout(bombTimer);
+      });
+    </script>
+  </body>
 </html>
